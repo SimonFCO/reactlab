@@ -60,7 +60,7 @@ function TodoList() {
 
         {todos.length === 0 && (
           <p style={{ textAlign: "center", color: "#888", marginTop: "20px" }}>
-            Du har inga sparade todos!
+            Du har inte sparat något ännu...
           </p>
         )}
       </div>

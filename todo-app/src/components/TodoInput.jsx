@@ -5,9 +5,12 @@ function TodoInput({ addTodo }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const inputValueLength = inputValue.length;
     if (inputValue.trim() !== "") {
-      addTodo(inputValue);
-      setInputValue("");
+      if (inputValueLength < 30) {
+        addTodo(inputValue);
+        setInputValue("");
+      }
     }
   };
 
@@ -15,7 +18,7 @@ function TodoInput({ addTodo }) {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Vad behöver du göra?"
+        placeholder="Skriv din note här NU?"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       />

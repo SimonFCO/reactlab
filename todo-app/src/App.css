@@ -1,24 +1,33 @@
 .app-container {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  background-color: #0e93ff;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   padding-top: 50px;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .todo-list-container {
-  background: white;
+  background: rgb(31, 31, 31);
   padding: 20px 30px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  -ms-border-radius: 80px;
+  -o-border-radius: 80px;
 }
 
 h1 {
   text-align: center;
-  color: #333;
+  color: #04aa6d;
 }
 
 form {
@@ -30,14 +39,14 @@ form input {
   flex: 1;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 4px 0 0 4px;
 }
 
 form button {
   padding: 10px 15px;
   background-color: #28a745;
-  color: white;
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
@@ -58,6 +67,8 @@ ul {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  white-space: pre;
+  color: #ffffff;
   border-bottom: 1px solid #eee;
 }
 
