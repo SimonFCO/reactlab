@@ -1,9 +1,10 @@
 import "./index.css";
+import TodoInput from "./components/TodoInput.jsx";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World!</h1>
+      <TodoInput>Tjenare</TodoInput>
     </div>
   );
 }
