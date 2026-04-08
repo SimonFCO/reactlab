@@ -1,24 +1,30 @@
-/* This code will handle the input and all that*/
+import React, { useState } from "react";
 
-import { createRoot } from "react-dom/client";
-import { useState } from "react";
+function TodoInput({ addTodo }) {
+  const [inputValue, setInputValue] = useState("");
 
-function MyForm() {
-  const [mytxt, setMytxt] = useState("");
-
-  function handleChange(e) {
-    setMytxt(e.target.value);
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (inputValue.trim() !== "") {
+      addTodo(inputValue);
+      setInputValue("");
+    }
+  };
 
   return (
-    <form>
-      <label>
-        Write here:
-        <textarea value={mytxt} onChange={handleChange} />
-      </label>
-      <button>add items</button>
+    <form className="todo-form" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        className="todo-input"
+        placeholder="Lägg till en ny Todo"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
+      <button type="submit" className="todo-button">
+        Lägg till
+      </button>
     </form>
   );
 }
 
-export default MyForm;
+export default TodoInput;
